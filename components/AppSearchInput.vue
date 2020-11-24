@@ -13,7 +13,9 @@
     >
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink
-          :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+          :to="
+            localePath({ name: 'blog-slug', params: { slug: article.slug } })
+          "
           class="flex px-4 py-2 items-center leading-5 transition ease-in-out duration-150 text-green-500 hover:text-black"
         >
           {{ article.title }}

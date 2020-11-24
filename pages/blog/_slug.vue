@@ -10,7 +10,7 @@
       />
       <div class="overlay"></div>
       <div class="absolute top-32 left-32 text-white">
-        <NuxtLink to="/"><Logo /></NuxtLink>
+        <NuxtLink :to="localePath('/')"><Logo /></NuxtLink>
         <div class="mt-16 -mb-3 flex uppercase text-sm">
           <p class="mr-3">
             {{ formatDate(article.updatedAt) }}
@@ -20,7 +20,7 @@
         </div>
         <h1 class="text-6xl font-bold">{{ article.title }}</h1>
         <span v-for="(tag, id) in article.tags" :key="id">
-          <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
+          <NuxtLink :to="localePath(`/blog/tag/${tags[tag].slug}`)">
             <span
               class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
             >
@@ -31,7 +31,7 @@
       </div>
       <div class="flex absolute top-3rem right-3rem">
         <NuxtLink
-          to="/"
+          :to="localePath('/')"
           class="mr-8 self-center text-white font-bold hover:underline"
         >
           All articles

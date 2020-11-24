@@ -51,7 +51,18 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content'
+    '@nuxt/content',
+    // Doc: https://i18n.nuxtjs.org/
+    [
+      'nuxt-i18n',
+      {
+        locales: ['ja', 'en'],
+        defaultLocale: 'ja',
+        vueI18n: {
+          fallbackLocale: 'ja'
+        }
+      }
+    ]
   ],
   /*
    ** Content module configuration
