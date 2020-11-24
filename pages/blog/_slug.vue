@@ -37,10 +37,10 @@
           All articles
         </NuxtLink>
         <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
+          href="https://epigno.jp"
           class="mr-8 self-center text-white font-bold hover:underline"
         >
-          Tutorial
+          Epigno
         </a>
         <AppSearchInput />
       </div>
