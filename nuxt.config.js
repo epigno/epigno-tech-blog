@@ -56,8 +56,16 @@ export default {
     [
       'nuxt-i18n',
       {
-        locales: ['ja', 'en'],
+        locales: [
+          { code: 'ja', iso: 'ja' },
+          { code: 'en', iso: 'en' }
+        ],
         defaultLocale: 'ja',
+        strategy: 'prefix_and_default',
+        detectBrowserLanguage: {
+          onlyOnRoot: true
+        },
+        seo: true,
         vueI18n: {
           fallbackLocale: 'ja'
         }
