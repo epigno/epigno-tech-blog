@@ -83,13 +83,13 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $content, params, app }) {
     const tags = await $content('tags')
       .where({ slug: { $contains: params.tag } })
       .limit(1)
       .fetch()
     const tag = tags.length > 0 ? tags[0] : {}
-    const articles = await $content('articles', params.slug)
+    const articles = await $content(`articles/${app.i18n.locale}`, params.slug)
       .where({ tags: { $contains: tag.name } })
       .sortBy('createdAt', 'asc')
       .fetch()

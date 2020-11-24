@@ -37,6 +37,14 @@
           Epigno
         </a>
         <AppSearchInput />
+
+        <NuxtLink
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+          class="py-2 px-4 text-white font-semibold"
+          >{{ locale.name }}</NuxtLink
+        >
       </div>
     </div>
     <div
@@ -54,8 +62,12 @@
 </template>
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
+  async asyncData({ $content, params, app }) {
+    const article = await $content(
+      `articles/${app.i18n.locale}`,
+      params.slug,
+    ).fetch()
+
     const tagsList = await $content('tags')
       .only(['name', 'slug'])
       .where({ name: { $containsAny: article.tags } })
@@ -73,6 +85,13 @@ export default {
       next,
     }
   },
+
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    },
+  },
+
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }

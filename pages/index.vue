@@ -78,8 +78,8 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const articles = await $content('articles', params.slug)
+  async asyncData({ $content, params, app }) {
+    const articles = await $content(`articles/${app.i18n.locale}`, params.slug)
       .only(['title', 'description', 'img', 'slug', 'author'])
       .sortBy('createdAt', 'desc')
       .fetch()
