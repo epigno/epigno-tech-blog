@@ -30,12 +30,6 @@
         </span>
       </div>
       <div class="flex absolute top-3rem right-3rem">
-        <NuxtLink
-          :to="localePath('/')"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          All articles
-        </NuxtLink>
         <a
           href="https://epigno.jp"
           class="mr-8 self-center text-white font-bold hover:underline"

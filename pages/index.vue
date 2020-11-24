@@ -1,8 +1,23 @@
+<i18n>
+{
+  "en": {
+    "blog-posts": "Epigno Tech Blog",
+    "topics": "Topics",
+    "by": "by {author}"
+  },
+  "ja" : {
+    "blog-posts": "Epigno技術ブログ",
+    "topics": "タグ",
+    "by": "{author}"
+  }
+}
+</i18n>
+
 <template>
   <div class="m-8">
     <TheHeader />
 
-    <h1 class="font-bold text-4xl">Blog Posts</h1>
+    <h1 class="font-bold text-4xl">{{ $t('blog-posts') }}</h1>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
@@ -25,7 +40,7 @@
             class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
           >
             <h2 class="font-bold">{{ article.title }}</h2>
-            <p>by {{ article.author.name }}</p>
+            <p>{{ $t('by', { author: article.author.name }) }}</p>
             <p class="font-bold text-gray-600 text-sm">
               {{ article.description }}
             </p>
@@ -33,7 +48,9 @@
         </NuxtLink>
       </li>
     </ul>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
+    <h3 class="mb-4 font-bold text-2xl uppercase text-center">
+      {{ $t('topics') }}
+    </h3>
     <ul class="flex flex-wrap mb-4 text-center">
       <li
         v-for="tag of tags"
@@ -51,19 +68,9 @@
     </ul>
     <footer class="flex justify-center border-gray-500 border-t-2">
       <p class="mt-4">
-        Created by
-        <a
-          href="https://twitter.com/debs_obrien"
-          class="font-bold hover:underline"
-          >Debbie O'Brien</a
-        >
-        at NuxtJS. See the
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="font-bold hover:underline"
-          >tutorial</a
-        >
-        for how to build it.
+        <a href="https://epigno.jp" class="font-bold hover:underline">
+          Epigno
+        </a>
       </p>
     </footer>
   </div>
