@@ -21,5 +21,5 @@ $ yarn dev
 $ yarn build
 
 # generate static project
-$ yarn export
+$ yarn generate
 ```
