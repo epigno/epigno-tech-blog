@@ -68,7 +68,8 @@ export default {
         seo: true,
         vueI18n: {
           fallbackLocale: 'ja'
-        }
+        },
+        vueI18nLoader: true
       }
     ]
   ],
