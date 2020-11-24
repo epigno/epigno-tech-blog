@@ -9,6 +9,7 @@ author:
   bio: CTO at Epigno
   img: /img/authors/pic-malik-olivier-boussejra.png
 createdAt: 2018-07-04
+updatedAt: 2018-07-04
 tags:
   - trivia
   - python
