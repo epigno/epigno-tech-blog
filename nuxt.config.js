@@ -16,10 +16,10 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Global CSS
@@ -44,7 +44,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
   /*
    ** Nuxt.js modules
@@ -58,20 +58,20 @@ export default {
       {
         locales: [
           { code: 'ja', iso: 'ja', name: '日本語' },
-          { code: 'en', iso: 'en', name: 'English' }
+          { code: 'en', iso: 'en', name: 'English' },
         ],
         defaultLocale: 'ja',
         strategy: 'prefix_and_default',
         detectBrowserLanguage: {
-          onlyOnRoot: true
+          onlyOnRoot: true,
         },
         seo: true,
         vueI18n: {
-          fallbackLocale: 'ja'
+          fallbackLocale: 'ja',
         },
-        vueI18nLoader: true
-      }
-    ]
+        vueI18nLoader: true,
+      },
+    ],
   ],
   /*
    ** Content module configuration
@@ -80,14 +80,14 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
     },
-    nestedProperties: ['author.name']
+    nestedProperties: ['author.name'],
   },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
 }

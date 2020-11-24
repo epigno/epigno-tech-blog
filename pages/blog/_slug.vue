@@ -58,7 +58,7 @@
             v-for="link of article.toc"
             :key="link.id"
             :class="{
-              'font-semibold': link.depth === 2
+              'font-semibold': link.depth === 2,
             }"
           >
             <nuxtLink
@@ -66,7 +66,7 @@
               class="hover:underline"
               :class="{
                 'py-2': link.depth === 2,
-                'ml-2 pb-2': link.depth === 3
+                'ml-2 pb-2': link.depth === 3,
               }"
               >{{ link.text }}</nuxtLink
             >
@@ -90,7 +90,7 @@ export default {
       .only(['name', 'slug'])
       .where({ name: { $containsAny: article.tags } })
       .fetch()
-    const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })))
+    const tags = Object.assign({}, ...tagsList.map(s => ({ [s.name]: s })))
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
@@ -100,15 +100,15 @@ export default {
       article,
       tags,
       prev,
-      next
+      next,
     }
   },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+    },
+  },
 }
 </script>
 <style>

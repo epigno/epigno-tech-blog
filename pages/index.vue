@@ -82,9 +82,9 @@ export default {
       .fetch()
     return {
       articles,
-      tags
+      tags,
     }
-  }
+  },
 }
 </script>
 

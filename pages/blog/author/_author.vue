@@ -70,21 +70,21 @@ export default {
     const articles = await $content('articles', params.slug)
       .where({
         'author.name': {
-          $regex: [params.author, 'i']
-        }
+          $regex: [params.author, 'i'],
+        },
       })
       .without('body')
       .sortBy('createdAt', 'asc')
       .fetch()
     return {
-      articles
+      articles,
     }
   },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+    },
+  },
 }
 </script>

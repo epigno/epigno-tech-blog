@@ -40,7 +40,7 @@ export default {
   data() {
     return {
       searchQuery: '',
-      articles: []
+      articles: [],
     }
   },
   watch: {
@@ -53,7 +53,7 @@ export default {
         .limit(6)
         .search(searchQuery)
         .fetch()
-    }
-  }
+    },
+  },
 }
 </script>
