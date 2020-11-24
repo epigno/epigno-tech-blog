@@ -68,6 +68,18 @@ export default {
       params.slug,
     ).fetch()
 
+    const availableLocales = []
+    for (const locale of app.i18n.locales.filter(
+      i => i.code !== app.i18n.locale,
+    )) {
+      try {
+        await $content(`articles/${locale.code}`, params.slug).fetch()
+        availableLocales.push(locale)
+      } catch {
+        // Translated article not found... Fall through
+      }
+    }
+
     const tagsList = await $content('tags')
       .only(['name', 'slug'])
       .where({ name: { $containsAny: article.tags } })
@@ -83,13 +95,8 @@ export default {
       tags,
       prev,
       next,
+      availableLocales,
     }
-  },
-
-  computed: {
-    availableLocales() {
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    },
   },
 
   methods: {
