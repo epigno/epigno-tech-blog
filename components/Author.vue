@@ -1,3 +1,14 @@
+<i18n>
+{
+  "en": {
+    "author": "Author"
+  },
+  "ja": {
+    "author": "ライター"
+  }
+}
+</i18n>
+
 <template>
   <div class="w-full px-2 xs:mb-6 md:mb-12 article-card">
     <NuxtLink
@@ -10,7 +21,7 @@
         :src="author.img"
       />
       <div class="flex flex-col m-4">
-        <h4 class="font-semibold">Author</h4>
+        <h4 class="font-semibold">{{ $t('author') }}</h4>
 
         <p>{{ author.name }}</p>
         <p>{{ author.bio }}</p>

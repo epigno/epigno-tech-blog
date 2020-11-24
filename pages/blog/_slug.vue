@@ -44,7 +44,6 @@
     >
       <h1 class="font-bold text-4xl">{{ article.title }}</h1>
       <p>{{ article.description }}</p>
-      <p class="pb-4">Post last updated: {{ formatDate(article.updatedAt) }}</p>
       <!-- table of contents -->
       <nav class="pb-6">
         <ul>
@@ -100,7 +99,7 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
+      return new Date(date).toLocaleDateString(this.$i18n.locale, options)
     },
   },
 }
