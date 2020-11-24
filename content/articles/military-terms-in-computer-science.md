@@ -6,7 +6,7 @@ alt: Random image
 author:
   name: Malik Olivier Boussejra
   bio: CTO at Epigno
-  img: https://images.unsplash.com/photo-1533636721434-0e2d61030955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
+  img: /img/authors/pic-malik-olivier-boussejra.png
 createdAt: 2016-11-18
 tags:
   - trivia
