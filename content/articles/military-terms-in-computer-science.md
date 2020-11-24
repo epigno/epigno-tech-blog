@@ -1,6 +1,6 @@
 ---
 title: Military terms in computer science
-description: Word etymology in computer science can be interesting. Here we will discuss about words based on military terms.
+description: Word etymology in computer science can be interesting
 img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
 alt: Random image
 author:
