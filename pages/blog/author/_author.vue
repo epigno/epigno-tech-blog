@@ -1,3 +1,16 @@
+<i18n>
+{
+  "en": {
+    "back": "Back to All Articles",
+    "title": "Here are a list of articles by {name}:"
+  },
+  "ja": {
+    "back": "ホームページに戻る",
+    "title": "{name}の記事"
+  }
+}
+</i18n>
+
 <template>
   <div
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
@@ -24,10 +37,10 @@
       class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
     >
       <NuxtLink :to="localePath('/')"
-        ><p class="hover:underline">Back to All Articles</p></NuxtLink
+        ><p class="hover:underline">{{ $t('back') }}</p></NuxtLink
       >
       <h3 class="mb-4 font-bold text-4xl">
-        Here are a list of articles by {{ articles[0].author.name }}:
+        {{ $t('title', { name: articles[0].author.name }) }}
       </h3>
       <ul>
         <li
@@ -83,7 +96,7 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
+      return new Date(date).toLocaleDateString(this.$i18n.locale, options)
     },
   },
 }
