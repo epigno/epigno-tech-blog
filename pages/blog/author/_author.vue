@@ -80,11 +80,9 @@
 <script>
 export default {
   async asyncData({ $content, params, app }) {
-    const articles = await $content(`articles/${app.i18n.locale}`, params.slug)
+    const articles = await $content(`articles/${app.i18n.locale}`)
       .where({
-        'author.name': {
-          $regex: [params.author, 'i'],
-        },
+        'author.slug': params.author,
       })
       .without('body')
       .sortBy('createdAt', 'asc')

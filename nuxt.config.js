@@ -83,7 +83,7 @@ export default {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
-    nestedProperties: ['author.name'],
+    nestedProperties: ['author.name', 'author.slug'],
   },
   /*
    ** Build configuration

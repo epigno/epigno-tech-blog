@@ -5,6 +5,7 @@ img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1
 alt: Random image
 author:
   name: Malik Olivier Boussejra
+  slug: olivier
   bio: CTO at Epigno
   img: /img/authors/pic-malik-olivier-boussejra.png
 createdAt: 2016-11-18

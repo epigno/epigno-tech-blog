@@ -5,6 +5,7 @@ img: https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/World_Time_Zones_
 alt: Random image
 author:
   name: Malik Olivier Boussejra
+  slug: olivier
   bio: CTO at Epigno
   img: /img/authors/pic-malik-olivier-boussejra.png
 createdAt: 2018-07-04
