@@ -23,3 +23,9 @@ $ yarn build
 # generate static project
 $ yarn generate
 ```
+
+## Deploy
+
+yarn && yarn build && yarn generate
+cp -rav dist/. ../epigno.github.io/
+cd ../epigno.github.io && git push
