@@ -6,6 +6,7 @@
       v-for="locale in availableLocales"
       :key="locale.code"
       :to="switchLocalePath(locale.code)"
+      class="py-2 px-4 font-semibold"
       >{{ locale.name }}</NuxtLink
     >
   </header>
