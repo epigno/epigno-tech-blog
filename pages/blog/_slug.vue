@@ -38,7 +38,6 @@
         >
           Epigno
         </a>
-        <AppSearchInput />
 
         <NuxtLink
           v-for="locale in availableLocales"
