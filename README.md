@@ -28,6 +28,8 @@ $ yarn generate
 
 ```sh
 yarn && yarn build && yarn generate
-cp -rav dist/. ../epigno.github.io/
-cd ../epigno.github.io && git push
+cd ../epigno.github.io
+git ls-files | xargs git rm
+cp -rav ../epigno-tech-blog/dist/. ../epigno.github.io/
+git add . && git commit -m Update && git push
 ```
