@@ -58,6 +58,8 @@
       <author :author="article.author" />
       <!-- prevNext component -->
       <PrevNext :prev="prev" :next="next" class="mt-8" />
+
+      <TheFooter />
     </div>
   </article>
 </template>

@@ -77,6 +77,8 @@
           </NuxtLink>
         </li>
       </ul>
+
+      <TheFooter />
     </div>
   </div>
 </template>
