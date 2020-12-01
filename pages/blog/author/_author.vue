@@ -32,6 +32,7 @@
         </h1>
         <p class="mb-4">{{ author.bio }}</p>
       </div>
+      <nuxt-content :document="author" />
     </div>
     <div
       class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
