@@ -17,8 +17,8 @@
   >
     <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
       <img
-        :src="articles[0].author.img"
-        :alt="articles[0].author.name"
+        :src="author.img"
+        :alt="author.name"
         class="absolute h-full w-full object-cover"
       />
     </div>
@@ -28,9 +28,9 @@
       <NuxtLink :to="localePath('/')"><Logo /></NuxtLink>
       <div class="mt-16 -mb-3 flex flex-col uppercase text-sm">
         <h1 class="text-4xl font-bold">
-          {{ articles[0].author.name }}
+          {{ author.name }}
         </h1>
-        <p class="mb-4">{{ articles[0].author.bio }}</p>
+        <p class="mb-4">{{ author.bio }}</p>
       </div>
     </div>
     <div
@@ -40,7 +40,7 @@
         ><p class="hover:underline">{{ $t('back') }}</p></NuxtLink
       >
       <h3 class="mb-4 font-bold text-4xl">
-        {{ $t('title', { name: articles[0].author.name }) }}
+        {{ $t('title', { name: author.name }) }}
       </h3>
       <ul>
         <li
@@ -82,6 +82,10 @@
 <script>
 export default {
   async asyncData({ $content, params, app }) {
+    const author = await $content(
+      `authors/${app.i18n.locale}`,
+      params.author,
+    ).fetch()
     const articles = await $content(`articles/${app.i18n.locale}`)
       .where({
         'author.slug': params.author,
@@ -90,6 +94,7 @@ export default {
       .sortBy('createdAt', 'asc')
       .fetch()
     return {
+      author,
       articles,
     }
   },
