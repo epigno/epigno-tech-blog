@@ -75,16 +75,20 @@
 export default {
   async asyncData({ $content, params, app }) {
     const articles = await $content(`articles/${app.i18n.locale}`, params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author'])
+      .only(['title', 'description', 'img', 'slug', 'author', 'tags'])
       .sortBy('createdAt', 'desc')
       .fetch()
     const tags = await $content('tags', params.slug)
       .only(['name', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'asc')
       .fetch()
+    const tagsWithArticles = tags.filter(tag => {
+      return articles.find(article => article.tags.includes(tag.name))
+    })
+
     return {
       articles,
-      tags,
+      tags: tagsWithArticles,
     }
   },
 }
