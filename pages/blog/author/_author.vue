@@ -25,7 +25,17 @@
 
     <div class="overlay"></div>
     <div class="absolute top-32 left-32 text-white">
-      <NuxtLink :to="localePath('/')"><Logo /></NuxtLink>
+      <div class="flex">
+        <NuxtLink :to="localePath('/')"><Logo /></NuxtLink>
+        <NuxtLink
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+          class="py-2 px-4 text-white font-semibold"
+          >{{ locale.name }}</NuxtLink
+        >
+      </div>
+
       <div class="mt-16 -mb-3 flex flex-col uppercase text-sm">
         <h1 class="text-4xl font-bold">
           {{ author.name }}
@@ -87,6 +97,7 @@ export default {
       `authors/${app.i18n.locale}`,
       params.author,
     ).fetch()
+
     const articles = await $content(`articles/${app.i18n.locale}`)
       .where({
         'author.slug': params.author,
@@ -94,9 +105,22 @@ export default {
       .without('body')
       .sortBy('createdAt', 'asc')
       .fetch()
+
+    const availableLocales = []
+    for (const locale of app.i18n.locales.filter(
+      i => i.code !== app.i18n.locale,
+    )) {
+      try {
+        await $content(`authors/${locale.code}`, params.author).fetch()
+        availableLocales.push(locale)
+      } catch {
+        // Translated author article not found... Fall through
+      }
+    }
     return {
       author,
       articles,
+      availableLocales,
     }
   },
   methods: {
