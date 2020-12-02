@@ -15,7 +15,6 @@
   <div class="m-8">
     <TheHeader />
 
-    <h1 class="font-bold text-4xl">Epigno Tech Blog</h1>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"

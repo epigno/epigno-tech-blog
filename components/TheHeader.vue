@@ -1,6 +1,7 @@
 <template>
   <header class="flex">
     <NuxtLink :to="localePath('/')"><Logo class="mb-4" /></NuxtLink>
+    <h1 class="font-bold text-xl py-1 px-3">Epigno Tech Blog</h1>
     <NuxtLink
       v-for="locale in availableLocales"
       :key="locale.code"
