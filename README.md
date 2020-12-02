@@ -27,9 +27,5 @@ $ yarn generate
 ## Deploy
 
 ```sh
-yarn && yarn build && yarn generate
-cd ../epigno.github.io
-git ls-files | xargs git rm
-cp -rav ../epigno-tech-blog/dist/. ../epigno.github.io/
-git add . && git commit -m Update && git push
+./deploy.sh
 ```

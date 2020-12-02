@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 .vscode
+
+# Deployed build
+epigno.github.io
