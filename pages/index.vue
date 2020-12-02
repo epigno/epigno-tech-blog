@@ -1,12 +1,10 @@
 <i18n>
 {
   "en": {
-    "blog-posts": "Epigno Tech Blog",
     "topics": "Topics",
     "by": "by {author}"
   },
   "ja" : {
-    "blog-posts": "Epigno技術ブログ",
     "topics": "タグ",
     "by": "{author}"
   }
@@ -17,7 +15,7 @@
   <div class="m-8">
     <TheHeader />
 
-    <h1 class="font-bold text-4xl">{{ $t('blog-posts') }}</h1>
+    <h1 class="font-bold text-4xl">Epigno Tech Blog</h1>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
