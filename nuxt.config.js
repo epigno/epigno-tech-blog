@@ -88,7 +88,7 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://epigno.github.io',
+    hostname: 'https://blog.epigno.jp',
     gzip: true,
     routes: async () => {
       const routes = []
