@@ -91,7 +91,7 @@ export default {
       .where({ name: { $containsAny: article.tags } })
       .fetch()
     const tags = Object.assign({}, ...tagsList.map(s => ({ [s.name]: s })))
-    const [prev, next] = await $content('articles')
+    const [prev, next] = await $content(`articles/${app.i18n.locale}`)
       .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
