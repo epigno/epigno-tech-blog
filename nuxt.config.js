@@ -52,6 +52,7 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
     // Doc: https://i18n.nuxtjs.org/
     [
       'nuxt-i18n',
@@ -85,6 +86,27 @@ export default {
     },
     nestedProperties: ['author.name', 'author.slug'],
   },
+
+  sitemap: {
+    hostname: 'https://epigno.github.io',
+    gzip: true,
+    routes: async () => {
+      const routes = []
+      const { $content } = require('@nuxt/content')
+      for (const locale of ['ja', 'en']) {
+        const posts = await $content(`articles/${locale}`).fetch()
+        for (const post of posts) {
+          let route = `blog/${post.slug}`
+          if (locale !== 'ja') {
+            route = `${locale}/${route}`
+          }
+          routes.push(route)
+        }
+      }
+      return routes
+    },
+  },
+
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
