@@ -31,6 +31,7 @@
             v-if="article.img"
             class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
             :src="article.img"
+            :alt="article.title"
           />
 
           <div

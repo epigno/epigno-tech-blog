@@ -1,5 +1,9 @@
 <template>
-  <img :src="require('~/assets/logo_green_e.svg')" class="logo" />
+  <img
+    :src="require('~/assets/logo_green_e.svg')"
+    alt="Epigno Logo"
+    class="logo"
+  />
 </template>
 
 <style scoped>
