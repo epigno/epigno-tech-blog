@@ -1,3 +1,7 @@
+const title = 'Epigno Tech Blog'
+const description = 'Epigno社内で出会う技術問題の特集'
+const baseUrl = 'https://blog.epigno.jp'
+
 export default {
   /*
    ** Nuxt target
@@ -9,14 +13,38 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'Epigno Tech Blog',
+    title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: description,
+      },
+
+      // OGP meta-data
+      // https://ogp.me/
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: title,
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content:
+          'https://u.jimcdn.com/cms/o/seec97e996b647a8d/userlayout/img/logo-small.png?t=1583479236',
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: baseUrl,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -88,7 +116,7 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://blog.epigno.jp',
+    hostname: baseUrl,
     gzip: true,
     routes: async () => {
       const routes = []
