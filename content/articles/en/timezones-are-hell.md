@@ -257,7 +257,7 @@ WHERE my_table.datetime_column::date = '2018-07-04'::date
 ```
 
 If your business analytics software happens to connect to a PostgreSQL database,
-do not forget to set the connection timezone appropriatly! If not, you may get
+do not forget to set the connection timezone appropriately! If not, you may get
 surprises when you query the database!
 
 **NB:**
