@@ -201,6 +201,23 @@ blockquote p {
 For good measure, rebase your patch set on top the latest commit in the main
 trunk before testing it.
 
+## Commit messages
+
+For bigger projects, commit message can be structured as follows:
+
+```
+[$component] $subComponent: $Title
+
+This commit fixes the issue X, by using the method Y.
+Y is preferable over Z because *foo*.
+```
+
+If no component or sub-component exists for the given changeset, feel free to
+leave out "`[$component]`" or "`$subComponent:`" from the title.
+
+If in doubt look at the commit history and be consistent with existing, similar
+commits.
+
 ## Code reviews
 
 To ensure code quality, we do reviews before merging a code contribution.
