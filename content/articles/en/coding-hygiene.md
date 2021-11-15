@@ -233,7 +233,7 @@ Ideally, a reviewer should not have to waste time pointing at obvious issues.
 
 When everything is checked, use the "Needs review" label and appoint an
 available reviewer.
-The reviewer shall review within a day, so that the submitted does not lose
+The reviewer shall review within a day, so that the submitter does not lose
 momentum.
 
 The review shall point issues that should be dealt with, then remove the "Needs
