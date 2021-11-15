@@ -52,6 +52,9 @@ Always *come back* and simplify.
 You are not paid by the line. On the contrary, reducing line count in a module
 without loss in functionality is the prerogative of a great programmer.
 
+The only code that has no bug is code that is not written.
+So the less code, the less bugs.
+
 ## Put related code close to each other
 
 When reading code, nothing is worse than having to jump to a completely
