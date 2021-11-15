@@ -236,7 +236,7 @@ available reviewer.
 The reviewer shall review within a day, so that the submitter does not lose
 momentum.
 
-The review shall point issues that should be dealt with, then remove the "Needs
+The reviewer shall point issues that should be dealt with, then remove the "Needs
 review" label. Through discussion, they will work together possible enhancements
 with the submitter about possible enhancements. Rinse and repeat until the merge
 request is as good as it can get.
