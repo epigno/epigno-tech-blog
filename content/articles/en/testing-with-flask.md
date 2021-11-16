@@ -7,7 +7,7 @@ author:
   name: Malik Olivier Boussejra
   slug: olivier
   bio: CTO at Epigno
-  img: /img/authors/pic-malik-olivier-boussejra.png
+  img: /img/authors/pic-malik-olivier-boussejra.jpg
 createdAt: 2018-08-01
 updatedAt: 2018-08-01
 tags:
