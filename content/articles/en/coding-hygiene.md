@@ -224,7 +224,8 @@ leave out "`[$component]`" or "`$subComponent:`" from the title.
 
 $Title should not be too long, it should be a title.
 Using an action verb describing the change is a good idea.
-For example: "Add feature X", not "Adds", not "Added", not "Adding", simply "Add").
+For example: "Add feature X", not "Adds", not "Added", not "Adding", not "add",
+simply "Add").
 
 For readability, the body of the commit message should be wrapped at the
 72-character column, except for quoted material that has a specific line format.
