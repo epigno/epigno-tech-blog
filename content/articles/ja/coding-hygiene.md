@@ -1,5 +1,5 @@
 ---
-title: コード衛生 (Code Hygiene)
+title: コード衛生 (Coding Hygiene)
 description: 高品質のソフトウェアを速くリリースするためのコーディングプラクティス
 img: /img/hygiene.jpg
 alt: "Coding hygiene, photo by Jernej Furman (https://www.flickr.com/photos/91261194@N06/49820964568)"
