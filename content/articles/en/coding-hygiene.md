@@ -204,6 +204,10 @@ blockquote p {
 For good measure, rebase your patch set on top the latest commit in the main
 trunk before testing it.
 
+Do not pollute a patch with unrelated or cosmetic changes (e.g. add/remove a
+line).  If you do think the style was bad, then fix the styling in a separate
+commit.  Remember: *Each patch should be justifiable on its own merits.*
+
 ## Commit messages
 
 For bigger projects, commit message can be structured as follows:
@@ -217,6 +221,13 @@ Y is preferable over Z because *foo*.
 
 If no component or sub-component exists for the given changeset, feel free to
 leave out "`[$component]`" or "`$subComponent:`" from the title.
+
+$Title should not be too long, it should be a title.
+Using an action verb describing the change is a good idea.
+For example: "Add feature X", not "Adds", not "Added", not "Adding", simply "Add").
+
+For readability, the body of the commit message should be wrapped at the
+72-character column, except for quoted material that has a specific line format.
 
 If in doubt look at the commit history and be consistent with existing, similar
 commits.
