@@ -83,7 +83,7 @@ export default {
     '@nuxtjs/sitemap',
     // Doc: https://i18n.nuxtjs.org/
     [
-      'nuxt-i18n',
+      '@nuxtjs/i18n',
       {
         locales: [
           { code: 'ja', iso: 'ja', name: '日本語' },
@@ -92,9 +92,8 @@ export default {
         defaultLocale: 'ja',
         strategy: 'prefix_and_default',
         detectBrowserLanguage: {
-          onlyOnRoot: true,
+          redirectOn: 'root',
         },
-        seo: true,
         vueI18n: {
           fallbackLocale: 'ja',
         },

@@ -23,9 +23,9 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
+    "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "nuxt": "^2.14.8",
-    "nuxt-i18n": "^6.15.4",
     "prism-themes": "^1.5.0"
   },
   "devDependencies": {
