@@ -1,8 +1,8 @@
 ---
 title: バリュー：エピグノで働く
 description: エピグノのエンジニアチームのバリュー
-# img: /img/mysql.png
-# alt: Working at Epigno
+img: /img/team.jpg
+alt: エピグノというチーム
 author:
   name: Malik Olivier Boussejra
   slug: olivier
