@@ -90,7 +90,7 @@ export default {
           { code: 'en', iso: 'en', name: 'English' },
         ],
         defaultLocale: 'ja',
-        strategy: 'prefix_and_default',
+        strategy: 'prefix_except_default',
         detectBrowserLanguage: {
           redirectOn: 'root',
         },
