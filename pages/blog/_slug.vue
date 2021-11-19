@@ -14,7 +14,9 @@
       <div class="absolute top-32 left-32 text-white">
         <div class="flex">
           <NuxtLink :to="localePath('/')"><Logo /></NuxtLink>
-          <h1 class="font-bold text-xl py-1 px-3">Epigno Tech Blog</h1>
+          <h1 class="font-bold text-xl py-1 px-3">
+            <NuxtLink :to="localePath('/')">Epigno Tech Blog</NuxtLink>
+          </h1>
         </div>
         <div class="mt-16 -mb-3 flex uppercase text-sm">
           <p class="mr-3">
