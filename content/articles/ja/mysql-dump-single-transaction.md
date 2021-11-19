@@ -8,6 +8,8 @@ author:
   slug: olivier
   bio: CTO at Epigno
   img: /img/authors/pic-malik-olivier-boussejra.jpg
+createdAt: 2021-06-28
+updatedAt: 2021-06-28
 tags:
   - mysql
 ---

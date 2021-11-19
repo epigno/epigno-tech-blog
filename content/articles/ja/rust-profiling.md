@@ -8,6 +8,8 @@ author:
   slug: olivier
   bio: CTO at Epigno
   img: /img/authors/pic-malik-olivier-boussejra.jpg
+createdAt: 2020-12-02
+updatedAt: 2020-12-02
 tags:
   - rust
 ---
