@@ -25,7 +25,9 @@
           <span class="mr-3">•</span>
           <p>{{ article.author.name }}</p>
         </div>
-        <h1 class="text-6xl font-bold">{{ article.title }}</h1>
+        <h1 class="text-4xl mt-2 md:text-5xl lg:text-6xl font-bold">
+          {{ article.title }}
+        </h1>
         <span v-for="(tag, id) in article.tags" :key="id">
           <NuxtLink :to="localePath(`/blog/tag/${tags[tag].slug}`)">
             <span
