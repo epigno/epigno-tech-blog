@@ -11,7 +11,10 @@
         class="absolute h-full w-full object-cover"
       />
       <div class="overlay"></div>
-      <div class="absolute top-32 left-32 text-white">
+      <div
+        class="absolute top-32 left-32"
+        :class="article.black ? 'text-black' : 'text-white'"
+      >
         <div class="flex">
           <NuxtLink :to="localePath('/')"><Logo /></NuxtLink>
           <h1 class="font-bold text-xl py-1 px-3">

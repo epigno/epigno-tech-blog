@@ -10,6 +10,7 @@ author:
   img: /img/authors/pic-malik-olivier-boussejra.jpg
 createdAt: 2018-08-01
 updatedAt: 2018-08-01
+black: true
 tags:
   - python
   - web development
