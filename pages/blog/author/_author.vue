@@ -24,7 +24,7 @@
     </div>
 
     <div class="overlay"></div>
-    <div class="absolute top-32 left-32 text-white">
+    <div class="absolute top-32 left-32 text-gray-500">
       <div class="flex">
         <NuxtLink :to="localePath('/')"><Logo /></NuxtLink>
         <NuxtLink
