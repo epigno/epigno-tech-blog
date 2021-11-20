@@ -5,8 +5,8 @@ bio: Epigno CTO
 img: /img/authors/pic-malik-olivier-boussejra.jpg
 ---
 
-<a href="mailto:malik@epigno.jp" class="font-bold hover:underline">
-  malik@epigno.jp
+<a href="mailto:olivier@epigno.jp" class="font-bold hover:underline">
+  olivier@epigno.jp
 </a>
 
 <br>
