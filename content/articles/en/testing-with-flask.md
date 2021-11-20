@@ -1,8 +1,8 @@
 ---
 title: Testing with flask
 description: Ramblings about testing with flask
-# img: /img/flask/logo.svg
-# alt: Flask logo
+img: /img/undraw_Usability_testing_re_uu1g.png
+alt: Usability testing
 author:
   name: Malik Olivier Boussejra
   slug: olivier
