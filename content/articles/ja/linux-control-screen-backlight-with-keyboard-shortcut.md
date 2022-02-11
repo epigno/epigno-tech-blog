@@ -9,7 +9,7 @@ author:
   bio: CTO at Epigno
   img: /img/authors/pic-malik-olivier-boussejra.jpg
 createdAt: 2022-01-27
-updatedAt: 2022-01-27
+updatedAt: 2022-02-11
 tags:
   - trivia
 ---
