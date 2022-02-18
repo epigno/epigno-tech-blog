@@ -9,7 +9,7 @@ author:
   bio: CTO at Epigno
   img: /img/authors/pic-malik-olivier-boussejra.jpg
 createdAt: 2021-11-19
-updatedAt: 2021-11-19
+updatedAt: 2022-02-18
 tags:
   - trivia
 ---
@@ -164,7 +164,7 @@ const bar = g(foo)
 
 投稿しているマージリクエストはパッチの系列だと考えてください．
 各パッチは１つのコミットになります．
-そう考えたら，コミット履歴は基本一次であるべきです．
+そう考えたら，コミット履歴は基本一本線であるべきです．
 
 これはコードのレグレッションを防止し，レビューの効率を上げるための手段です（レビュー効率アップ → 不具合が見つかりやすい → 品質向上）．
 
