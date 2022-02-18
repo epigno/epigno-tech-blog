@@ -2,6 +2,11 @@
 
 set -eux
 
+if [ ! -z "$(git status --porcelain)" ]; then
+  echo "Repository is not clean. Abort."
+  exit
+fi
+
 rm -r dist
 yarn && yarn build && yarn generate
 if [ ! -d 'epigno.github.io' ]; then
